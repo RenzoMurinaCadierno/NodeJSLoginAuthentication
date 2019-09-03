@@ -16,7 +16,7 @@ NODEJS: Express, Mongoose & Passport Login/Signup app
 1. Introduction
 ---------------
 
-This is a minimal attempt at an excercise a teacher suggested us to do to integrate some concepts we learned in a NodeJS and MongoDB course at EducacionIT institute, based on a skeleton of a NodeJS app we have seen and discussed during that course. So, shout out to Daniel Sanchez (our teacher) and the academy itself for pushing us to practise and learn a little bit more every day.
+This is a minimal attempt at an excercise a teacher suggested us to do to integrate some concepts we have learned in a NodeJS and MongoDB course at EducacionIT institute, based on a skeleton of a NodeJS app we have seen and discussed during that course. So, shout out to Daniel Sanchez (our teacher) and the academy itself for pushing us to practise and learn a little bit more every day.
 
 Before going on, let me clarify that I have done this only as my first practise of backend authentication with NodeJS. I did not add any front-end decoration with plain CSS, bootstrap or alikes since this was not the objective of the excercise.
 
@@ -31,7 +31,7 @@ If you find the app useful, feel free to use it as you like. But please, since I
 2. Open a terminal on that path and recover all npm packages with 'npm install' command.
 3. Initialize a Mongo database on that path in one terminal with the 'mongod --dbpath "path here"' command. Don't forget the 'data' and 'db' folders required by MongoDB.
 4. On a second terminal, execute MongoDB (mongo.exe).
-5. On a third terminal, launch the app: (node server.js).
+5. On a third terminal, launch the app: node server.js.
 6. Open http://localhost:8080 in a browser and there you go.
 
 
@@ -45,9 +45,9 @@ First of all, the root page will render a login validation form which will eithe
 
 Either way, when you type the data on the fields and hit the submit button, Passport will kick in to authenticate the submitted information.
 
-    > If you attempted to log in and credentials were invalid, then it renders a login-error page and gives you the option to go back.
+If you attempted to log in and credentials were invalid, then it renders a login-error page and gives you the option to go back.
 
-    > If you tried to sign up and the username is already in the database, same idea: it redirects you to a signup-error page.
+If you tried to sign up and the username is already in the database, same idea: it redirects you to a signup-error page.
 
 On a valid authentication (either login or signup), Passport will create/restore the user session, render a login-ok page displaying the user information and offer you a logout option.
 
@@ -67,23 +67,23 @@ There's a routing-map.jpg in the repository that illustrates the whole routing p
 --------------------------------
 
 EXPRESS: Server implementation, session persistance, user
-    > EXPRESS-SESSION: session persistance.
-    > COOKIE-PARSER: cookie usage.
-    > BODY-PARSER: html parsing.
-    > EXPRESS-HANDLEBARS: template rendering engine.
+    -> EXPRESS-SESSION: session persistance.
+    -> COOKIE-PARSER: cookie usage.
+    -> BODY-PARSER: html parsing.
+    -> EXPRESS-HANDLEBARS: template rendering engine.
 
 MONGOOSE: MongoDB managing (creating, saving, querying user profiles and information).
 
 PASSPORT: Login and Signup authentication, forwarding and redirecting.
-    > PASSPORT-LOCAL: Passport strategy managing. 
+    -> PASSPORT-LOCAL: Passport strategy managing. 
 
 BCRYPT: Passport encryption.
 
 CUSTOM ONES:
-    > /routes: Route mapping module.
-    > /db-controls: DB's URL and DB connection management.
-    > /mongoose-models: Mongoose User model declaration.
-    > /extra-configs: Cookie maxAge, env.IP and env.PORT (if you would prefer to use them that way).
+    -> /routes: Route mapping module.
+    -> /db-controls: DB's URL and DB connection management.
+    -> /mongoose-models: Mongoose User model declaration.
+    -> /extra-configs: Cookie maxAge, env.IP and env.PORT (if you would prefer to use them that way).
 
 
 -------------
@@ -92,6 +92,6 @@ CUSTOM ONES:
 
 Passport is a very powerful module to authenticate sessions and redirect paths. Needless to say, Express and Mongoose are excellent frameworks to work with NodeJS back-end implementations, which goes for servers and databases.
 
-Being this my first experience this king of NodeJS app management, I apologize if any line of code or front-end presentation made your eyes bleed. I myself found it quite entertaining and a marvelous instance to practise on my way to learn how the wires are tied behind the web pages you see on screen.
+Being this one my first experience with this kind of NodeJS app management, I apologize if any line of code or front-end presentation made your eyes bleed. I myself found it quite an entertaining and a marvelous instance to practise on my way to learn how the wires are tied behind the web pages you see on screen.
 
 Thank you for giving me the opportunity to share my first steps in the wholesome world of programming with you!
