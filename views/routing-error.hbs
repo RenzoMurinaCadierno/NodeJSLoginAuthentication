@@ -1,0 +1,21 @@
+<h1>ROUTING ERROR</h1>
+
+<h2>Redirecting to login page in 3 seconds...</h2>
+
+<h3>Or click on the button to manually redirect</h3>
+<button onclick='redirect("/")'> Back </button>
+
+<script>
+
+    function back() {
+        console.log('Redirecting to root page...');
+        setTimeout(redirect, 3000, '/');
+    }
+    
+    function redirect(page) {
+        location.href = page
+    } 
+
+    back()
+    
+</script>

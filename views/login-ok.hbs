@@ -1,0 +1,21 @@
+<h1>LOGGED IN</h1>
+
+<h2><i>User: {{user}}</i></h2>
+
+<br>
+
+<h3>Name: {{name}}</h3>
+<h3>Surname: {{surname}}</h3>
+<h3>Mail: {{email}}</h3>
+<button onclick='logout()'>Logout</button>
+
+<script>
+    function redirect(page) {
+        location.href = page
+    } 
+
+    function logout() {
+        console.log('Logging out...');
+        redirect('/logout')
+    }
+</script>
