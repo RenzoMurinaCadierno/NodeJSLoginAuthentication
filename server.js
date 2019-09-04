@@ -1,6 +1,6 @@
 
 /********************************** IMPORTS **********************************/
-//take screenshots!! > mongod --db-path > mongo.exe > node ServiceWorkerRegistration.js
+
 //EXPRESS and basic server imports
 const express = require('express')
 const expressSession = require('express-session')
